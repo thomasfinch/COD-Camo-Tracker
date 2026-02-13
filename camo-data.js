@@ -119,6 +119,20 @@ const CAMO_DATA = {
         { id: "maddox_rfb_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
       ]
     },
+    {
+      id: "egrt17",
+      name: "EGRT-17",
+      class: "assault_rifles",
+      camos: [
+        { id: "egrt17_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
+        { id: "egrt17_special_1", name: "Diamondback", category: "special", requirement: "TBD", order: 2 },
+        { id: "egrt17_special_2", name: "Raptor", category: "special", requirement: "TBD", order: 3 },
+        { id: "egrt17_special_3", name: "Mainframe", category: "special", requirement: "TBD", order: 4 },
+        { id: "egrt17_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
+        { id: "egrt17_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "egrt17_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
+      ]
+    },
 
     // ==================== SMGS ====================
     {
@@ -216,6 +230,20 @@ const CAMO_DATA = {
         { id: "kogot7_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
         { id: "kogot7_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
         { id: "kogot7_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
+      ]
+    },
+    {
+      id: "rev46",
+      name: "REV-46",
+      class: "smgs",
+      camos: [
+        { id: "rev46_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
+        { id: "rev46_special_1", name: "Diamondback", category: "special", requirement: "TBD", order: 2 },
+        { id: "rev46_special_2", name: "Raptor", category: "special", requirement: "TBD", order: 3 },
+        { id: "rev46_special_3", name: "Mainframe", category: "special", requirement: "TBD", order: 4 },
+        { id: "rev46_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
+        { id: "rev46_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "rev46_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
       ]
     },
 
@@ -467,6 +495,20 @@ const CAMO_DATA = {
         { id: "arc_m1_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills in a single match", order: 7 }
       ]
     },
+    {
+      id: "gdl_havoc",
+      name: "GDL Havoc",
+      class: "launchers",
+      camos: [
+        { id: "gdl_havoc_military", name: "Scorestreak Destructions", category: "military", requirement: "Destroy 50 scorestreaks", order: 1 },
+        { id: "gdl_havoc_special_1", name: "Diamondback", category: "special", requirement: "TBD", order: 2 },
+        { id: "gdl_havoc_special_2", name: "Raptor", category: "special", requirement: "TBD", order: 3 },
+        { id: "gdl_havoc_special_3", name: "Mainframe", category: "special", requirement: "TBD", order: 4 },
+        { id: "gdl_havoc_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills in a single match 10 times", order: 5 },
+        { id: "gdl_havoc_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "gdl_havoc_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills in a single match", order: 7 }
+      ]
+    },
 
     // ==================== MELEE ====================
     {
@@ -508,6 +550,20 @@ const CAMO_DATA = {
         { id: "ballistic_knife_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
         { id: "ballistic_knife_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
         { id: "ballistic_knife_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
+      ]
+    },
+    {
+      id: "h311_saw",
+      name: "H311-SAW",
+      class: "melee",
+      camos: [
+        { id: "h311_saw_military", name: "Eliminations", category: "military", requirement: "Get 250 eliminations", order: 1 },
+        { id: "h311_saw_special_1", name: "Diamondback", category: "special", requirement: "TBD", order: 2 },
+        { id: "h311_saw_special_2", name: "Raptor", category: "special", requirement: "TBD", order: 3 },
+        { id: "h311_saw_special_3", name: "Mainframe", category: "special", requirement: "TBD", order: 4 },
+        { id: "h311_saw_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
+        { id: "h311_saw_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "h311_saw_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
       ]
     }
   ],
