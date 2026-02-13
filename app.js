@@ -168,14 +168,6 @@ function createWeaponCard(weapon) {
   const card = document.createElement("div");
   card.className = "weapon-card";
 
-  // Unlock text
-  let unlockText = "";
-  if (weapon.unlockLevel !== null && weapon.unlockLevel !== undefined) {
-    unlockText = `Level ${weapon.unlockLevel}`;
-  } else if (weapon.unlockRequirement) {
-    unlockText = weapon.unlockRequirement;
-  }
-
   // Header
   const header = document.createElement("div");
   header.className = "weapon-header";
@@ -183,7 +175,6 @@ function createWeaponCard(weapon) {
     <span class="weapon-expand">&#9654;</span>
     <div class="weapon-info">
       <div class="weapon-name">${weapon.name}</div>
-      ${unlockText ? `<div class="weapon-unlock">${unlockText}</div>` : ""}
     </div>
     <div class="weapon-progress">
       <span class="weapon-progress-text">${done}/${total}</span>

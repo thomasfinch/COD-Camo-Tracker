@@ -26,7 +26,6 @@ const CAMO_DATA = {
       id: "m15_mod_0",
       name: "M15 Mod 0",
       class: "assault_rifles",
-      unlockLevel: 1,
       camos: [
         { id: "m15_mod_0_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "m15_mod_0_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
@@ -41,7 +40,6 @@ const CAMO_DATA = {
       id: "ak27",
       name: "AK-27",
       class: "assault_rifles",
-      unlockLevel: 4,
       camos: [
         { id: "ak27_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "ak27_special_1", name: "Diamondback", category: "special", requirement: "Get 30 hipfire kills", order: 2 },
@@ -56,7 +54,6 @@ const CAMO_DATA = {
       id: "mxr17",
       name: "MXR-17",
       class: "assault_rifles",
-      unlockLevel: 16,
       camos: [
         { id: "mxr17_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "mxr17_special_1", name: "Diamondback", category: "special", requirement: "With 5+ attachments equipped, get 50 eliminations", order: 2 },
@@ -71,7 +68,6 @@ const CAMO_DATA = {
       id: "x9_maverick",
       name: "X9 Maverick",
       class: "assault_rifles",
-      unlockLevel: 28,
       camos: [
         { id: "x9_maverick_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "x9_maverick_special_1", name: "Diamondback", category: "special", requirement: "Kill 30 enemies afflicted by your tactical equipment", order: 2 },
@@ -86,7 +82,6 @@ const CAMO_DATA = {
       id: "ds20_mirage",
       name: "DS20 Mirage",
       class: "assault_rifles",
-      unlockLevel: 37,
       camos: [
         { id: "ds20_mirage_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "ds20_mirage_special_1", name: "Diamondback", category: "special", requirement: "With a 4.0x or higher scope, get 50 eliminations", order: 2 },
@@ -101,7 +96,6 @@ const CAMO_DATA = {
       id: "peacekeeper_mk1",
       name: "Peacekeeper MK1",
       class: "assault_rifles",
-      unlockLevel: 52,
       camos: [
         { id: "peacekeeper_mk1_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "peacekeeper_mk1_special_1", name: "Diamondback", category: "special", requirement: "Get 50 eliminations with 5+ attachments", order: 2 },
@@ -115,10 +109,7 @@ const CAMO_DATA = {
     {
       id: "maddox_rfb",
       name: "Maddox RFB",
-      class: "assault_rifles",
-      unlockLevel: null,
-      unlockRequirement: "Season 1 Battle Pass (Page 6)",
-      camos: [
+      class: "assault_rifles",      camos: [
         { id: "maddox_rfb_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "maddox_rfb_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
         { id: "maddox_rfb_special_2", name: "Raptor", category: "special", requirement: "Get 30 kills while or shortly after sprinting", order: 3 },
@@ -134,7 +125,6 @@ const CAMO_DATA = {
       id: "ryden_45k",
       name: "Ryden 45K",
       class: "smgs",
-      unlockLevel: 1,
       camos: [
         { id: "ryden_45k_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "ryden_45k_special_1", name: "Diamondback", category: "special", requirement: "Get 50 eliminations without any attachments", order: 2 },
@@ -149,7 +139,6 @@ const CAMO_DATA = {
       id: "rk9",
       name: "RK-9",
       class: "smgs",
-      unlockLevel: 7,
       camos: [
         { id: "rk9_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "rk9_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
@@ -164,7 +153,6 @@ const CAMO_DATA = {
       id: "razor_9mm",
       name: "Razor 9mm",
       class: "smgs",
-      unlockLevel: 19,
       camos: [
         { id: "razor_9mm_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "razor_9mm_special_1", name: "Diamondback", category: "special", requirement: "Get 30 hipfire kills", order: 2 },
@@ -179,7 +167,6 @@ const CAMO_DATA = {
       id: "dravec_45",
       name: "Dravec 45",
       class: "smgs",
-      unlockLevel: 34,
       camos: [
         { id: "dravec_45_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "dravec_45_special_1", name: "Diamondback", category: "special", requirement: "Get 30 objective kills", order: 2 },
@@ -194,7 +181,6 @@ const CAMO_DATA = {
       id: "carbon_57",
       name: "Carbon 57",
       class: "smgs",
-      unlockLevel: 46,
       camos: [
         { id: "carbon_57_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "carbon_57_special_1", name: "Diamondback", category: "special", requirement: "Get 30 hipfire kills", order: 2 },
@@ -209,7 +195,6 @@ const CAMO_DATA = {
       id: "mpc25",
       name: "MPC-25",
       class: "smgs",
-      unlockLevel: 55,
       camos: [
         { id: "mpc25_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "mpc25_special_1", name: "Diamondback", category: "special", requirement: "Get 50 eliminations with a suppressor equipped", order: 2 },
@@ -223,10 +208,7 @@ const CAMO_DATA = {
     {
       id: "kogot7",
       name: "Kogot-7",
-      class: "smgs",
-      unlockLevel: null,
-      unlockRequirement: "Season 1 Battle Pass (Page 3)",
-      camos: [
+      class: "smgs",      camos: [
         { id: "kogot7_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "kogot7_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
         { id: "kogot7_special_2", name: "Raptor", category: "special", requirement: "Get 30 kills while or shortly after sprinting", order: 3 },
@@ -242,7 +224,6 @@ const CAMO_DATA = {
       id: "m10_breacher",
       name: "M10 Breacher",
       class: "shotguns",
-      unlockLevel: 1,
       camos: [
         { id: "m10_breacher_military", name: "Point-Blank Kills", category: "military", requirement: "Get 80 point-blank kills", order: 1 },
         { id: "m10_breacher_special_1", name: "Diamondback", category: "special", requirement: "Get a kill without taking any damage 30 times", order: 2 },
@@ -257,7 +238,6 @@ const CAMO_DATA = {
       id: "echo_12",
       name: "Echo 12",
       class: "shotguns",
-      unlockLevel: 22,
       camos: [
         { id: "echo_12_military", name: "Point-Blank Kills", category: "military", requirement: "Get 80 point-blank kills", order: 1 },
         { id: "echo_12_special_1", name: "Diamondback", category: "special", requirement: "Get 30 objective kills", order: 2 },
@@ -272,7 +252,6 @@ const CAMO_DATA = {
       id: "akita",
       name: "Akita",
       class: "shotguns",
-      unlockLevel: 40,
       camos: [
         { id: "akita_military", name: "Point-Blank Kills", category: "military", requirement: "Get 80 point-blank kills", order: 1 },
         { id: "akita_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
@@ -289,7 +268,6 @@ const CAMO_DATA = {
       id: "mk78",
       name: "MK.78",
       class: "lmgs",
-      unlockLevel: 1,
       camos: [
         { id: "mk78_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "mk78_special_1", name: "Diamondback", category: "special", requirement: "Get 30 objective kills", order: 2 },
@@ -304,7 +282,6 @@ const CAMO_DATA = {
       id: "xm325",
       name: "XM325",
       class: "lmgs",
-      unlockLevel: 31,
       camos: [
         { id: "xm325_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "xm325_special_1", name: "Diamondback", category: "special", requirement: "Kill 30 enemies affected by your tactical equipment", order: 2 },
@@ -318,10 +295,7 @@ const CAMO_DATA = {
     {
       id: "sokol_545",
       name: "Sokol 545",
-      class: "lmgs",
-      unlockLevel: null,
-      unlockRequirement: "CODMAS Event",
-      camos: [
+      class: "lmgs",      camos: [
         { id: "sokol_545_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "sokol_545_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
         { id: "sokol_545_special_2", name: "Raptor", category: "special", requirement: "Get 2 kills without releasing the trigger 5 times", order: 3 },
@@ -337,7 +311,6 @@ const CAMO_DATA = {
       id: "m8a1",
       name: "M8A1",
       class: "marksman_rifles",
-      unlockLevel: 10,
       camos: [
         { id: "m8a1_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "m8a1_special_1", name: "Diamondback", category: "special", requirement: "With a 4.0x or higher scope, get 50 eliminations", order: 2 },
@@ -352,7 +325,6 @@ const CAMO_DATA = {
       id: "warden_308",
       name: "Warden 308",
       class: "marksman_rifles",
-      unlockLevel: 25,
       camos: [
         { id: "warden_308_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "warden_308_special_1", name: "Diamondback", category: "special", requirement: "Get 30 objective kills", order: 2 },
@@ -367,7 +339,6 @@ const CAMO_DATA = {
       id: "m34_novaline",
       name: "M34 Novaline",
       class: "marksman_rifles",
-      unlockLevel: 49,
       camos: [
         { id: "m34_novaline_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "m34_novaline_special_1", name: "Diamondback", category: "special", requirement: "Get 15 Long Shot Medals", order: 2 },
@@ -384,7 +355,6 @@ const CAMO_DATA = {
       id: "vs_recon",
       name: "VS Recon",
       class: "sniper_rifles",
-      unlockLevel: 1,
       camos: [
         { id: "vs_recon_military", name: "One Shot Kills", category: "military", requirement: "Get 80 one shot kills", order: 1 },
         { id: "vs_recon_special_1", name: "Diamondback", category: "special", requirement: "With a 4.0x or higher scope, get 50 eliminations", order: 2 },
@@ -399,7 +369,6 @@ const CAMO_DATA = {
       id: "shadow_sk",
       name: "Shadow SK",
       class: "sniper_rifles",
-      unlockLevel: 13,
       camos: [
         { id: "shadow_sk_military", name: "One Shot Kills", category: "military", requirement: "Get 80 one shot kills", order: 1 },
         { id: "shadow_sk_special_1", name: "Diamondback", category: "special", requirement: "Get 50 eliminations with a suppressor equipped", order: 2 },
@@ -414,7 +383,6 @@ const CAMO_DATA = {
       id: "xr3_ion",
       name: "XR-3 Ion",
       class: "sniper_rifles",
-      unlockLevel: 43,
       camos: [
         { id: "xr3_ion_military", name: "One Shot Kills", category: "military", requirement: "Get 80 one shot kills", order: 1 },
         { id: "xr3_ion_special_1", name: "Diamondback", category: "special", requirement: "Get 15 Long Shot Medals", order: 2 },
@@ -431,7 +399,6 @@ const CAMO_DATA = {
       id: "jager_45",
       name: "Jager 45",
       class: "pistols",
-      unlockLevel: 1,
       camos: [
         { id: "jager_45_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "jager_45_special_1", name: "Diamondback", category: "special", requirement: "Get 15 kills shortly after switching weapons", order: 2 },
@@ -446,7 +413,6 @@ const CAMO_DATA = {
       id: "velox_57",
       name: "Velox 5.7",
       class: "pistols",
-      unlockLevel: 13,
       camos: [
         { id: "velox_57_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "velox_57_special_1", name: "Diamondback", category: "special", requirement: "Get a kill while sliding, diving, or wall-jumping 15 times", order: 2 },
@@ -461,7 +427,6 @@ const CAMO_DATA = {
       id: "coda_9",
       name: "CODA 9",
       class: "pistols",
-      unlockLevel: 22,
       camos: [
         { id: "coda_9_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
         { id: "coda_9_special_1", name: "Diamondback", category: "special", requirement: "Get 10 eliminations with a suppressor equipped", order: 2 },
@@ -478,7 +443,6 @@ const CAMO_DATA = {
       id: "aarow_109",
       name: "AAROW 109",
       class: "launchers",
-      unlockLevel: 1,
       camos: [
         { id: "aarow_109_military", name: "Scorestreak Destructions", category: "military", requirement: "Destroy 50 scorestreaks", order: 1 },
         { id: "aarow_109_special_1", name: "Diamondback", category: "special", requirement: "Destroy 10 aerial scorestreaks", order: 2 },
@@ -493,7 +457,6 @@ const CAMO_DATA = {
       id: "arc_m1",
       name: "A.R.C. M1",
       class: "launchers",
-      unlockLevel: 25,
       camos: [
         { id: "arc_m1_military", name: "Scorestreak Destructions", category: "military", requirement: "Destroy 50 scorestreaks", order: 1 },
         { id: "arc_m1_special_1", name: "Diamondback", category: "special", requirement: "Destroy 10 aerial scorestreaks", order: 2 },
@@ -510,7 +473,6 @@ const CAMO_DATA = {
       id: "knife",
       name: "Knife",
       class: "melee",
-      unlockLevel: 1,
       camos: [
         { id: "knife_military", name: "Eliminations", category: "military", requirement: "Get 250 eliminations", order: 1 },
         { id: "knife_special_1", name: "Diamondback", category: "special", requirement: "Get 50 kills while moving", order: 2 },
@@ -525,7 +487,6 @@ const CAMO_DATA = {
       id: "flatline_mk2",
       name: "Flatline MK.II",
       class: "melee",
-      unlockLevel: 49,
       camos: [
         { id: "flatline_mk2_military", name: "Eliminations", category: "military", requirement: "Get 250 eliminations", order: 1 },
         { id: "flatline_mk2_special_1", name: "Diamondback", category: "special", requirement: "Get a kill while sliding, diving, or wall-jumping 15 times", order: 2 },
@@ -539,10 +500,7 @@ const CAMO_DATA = {
     {
       id: "ballistic_knife",
       name: "Ballistic Knife",
-      class: "melee",
-      unlockLevel: null,
-      unlockRequirement: "Season 1 Weekly Challenges (Week 1)",
-      camos: [
+      class: "melee",      camos: [
         { id: "ballistic_knife_military", name: "Eliminations", category: "military", requirement: "Get 250 eliminations", order: 1 },
         { id: "ballistic_knife_special_1", name: "Diamondback", category: "special", requirement: "Get 25 kills shortly after switching weapons", order: 2 },
         { id: "ballistic_knife_special_2", name: "Raptor", category: "special", requirement: "Get 50 kills while moving", order: 3 },
