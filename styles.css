@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #111;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222;
+  --border: #333;
+  --text: #e5e5e5;
+  --text-muted: #888;
+  --accent: #f59e0b;
+  --accent-dim: #92610b;
+  --military: #4a5568;
+  --special: #2b6cb0;
+  --mastery: #d69e2e;
+  --complete: #22c55e;
+  --progress-bg: #2a2a2a;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* Header */
+header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover {
+  background: var(--bg-card-hover);
+}
+
+/* Progress summary */
+.progress-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.progress-bar-track {
+  height: 8px;
+  background: var(--progress-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+.progress-bar-fill.complete {
+  background: var(--complete);
+}
+
+/* Class filter */
+.class-filter {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.75rem 1.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.class-filter button {
+  flex-shrink: 0;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.class-filter button:hover {
+  border-color: var(--accent-dim);
+  color: var(--text);
+}
+
+.class-filter button.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* Weapon list */
+.weapon-list {
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Weapon card */
+.weapon-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.weapon-header {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  gap: 0.75rem;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.weapon-header:hover {
+  background: var(--bg-card-hover);
+}
+
+.weapon-expand {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+}
+
+.weapon-card.open .weapon-expand {
+  transform: rotate(90deg);
+}
+
+.weapon-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.weapon-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.weapon-unlock {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.weapon-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.weapon-progress-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.weapon-progress-bar {
+  width: 60px;
+  height: 6px;
+  background: var(--progress-bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.weapon-progress-bar .progress-bar-fill {
+  height: 100%;
+}
+
+/* Camo list */
+.camo-list {
+  display: none;
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 0;
+}
+
+.weapon-card.open .camo-list {
+  display: block;
+}
+
+.camo-category-label {
+  padding: 0.3rem 1rem 0.2rem 2.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.camo-category-label.military { color: var(--military); }
+.camo-category-label.special { color: var(--special); }
+.camo-category-label.mastery { color: var(--mastery); }
+
+.camo-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.45rem 1rem 0.45rem 1.5rem;
+  gap: 0.6rem;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+
+.camo-item:hover {
+  background: var(--bg-card-hover);
+}
+
+.camo-item.completed {
+  opacity: 0.5;
+}
+
+.camo-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.camo-item input[type="checkbox"]:checked {
+  background: var(--complete);
+  border-color: var(--complete);
+}
+
+.camo-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.camo-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.camo-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.camo-requirement {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.camo-badge {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.camo-badge.military { background: var(--military); color: #fff; }
+.camo-badge.special { background: var(--special); color: #fff; }
+.camo-badge.mastery { background: var(--mastery); color: #000; }
+
+/* Singularity banner */
+.singularity-banner {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  border: 2px solid var(--mastery);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.singularity-banner h2 {
+  color: var(--mastery);
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.singularity-banner p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.singularity-banner .progress-bar-track {
+  margin-top: 0.75rem;
+}
+
+.singularity-banner .singularity-stats {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.singularity-banner.unlocked {
+  border-color: var(--complete);
+}
+
+.singularity-banner.unlocked h2 {
+  color: var(--complete);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  header {
+    padding: 1.25rem 2rem;
+  }
+
+  .class-filter {
+    padding: 0.75rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .weapon-list {
+    padding: 1rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  header {
+    padding: 1.25rem 4rem;
+  }
+
+  .class-filter {
+    padding: 0.75rem 4rem;
+  }
+
+  .weapon-list {
+    padding: 1rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
