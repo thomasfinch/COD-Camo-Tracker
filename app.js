@@ -137,7 +137,7 @@ function renderWeapons() {
 
   // Singularity banner
   const tempestCount = getWeaponsWithTempest();
-  const totalWeapons = CAMO_DATA.weapons.length;
+  const totalWeapons = 30;
   const singBanner = document.createElement("div");
   const singUnlocked = tempestCount === totalWeapons;
   singBanner.className = `singularity-banner${singUnlocked ? " unlocked" : ""}`;
@@ -258,7 +258,7 @@ function updateSingularityBanner() {
   const banner = document.querySelector(".singularity-banner");
   if (!banner) return;
   const tempestCount = getWeaponsWithTempest();
-  const totalWeapons = CAMO_DATA.weapons.length;
+  const totalWeapons = 30;
   const unlocked = tempestCount === totalWeapons;
   banner.classList.toggle("unlocked", unlocked);
   banner.querySelector("h2").textContent = unlocked ? "Singularity Unlocked!" : "Singularity";

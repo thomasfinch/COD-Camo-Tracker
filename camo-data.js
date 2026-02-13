@@ -573,7 +573,7 @@ const CAMO_DATA = {
     id: "singularity",
     name: "Singularity",
     category: "mastery",
-    requirement: "Unlock Tempest camo on all 30 weapons",
+    requirement: "Unlock Tempest camo on 30 weapons",
     description: "The ultimate multiplayer mastery camo"
   }
 };
