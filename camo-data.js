@@ -246,6 +246,20 @@ const CAMO_DATA = {
         { id: "rev46_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
       ]
     },
+    {
+      id: "sturmwolf_45",
+      name: "Sturmwolf 45",
+      class: "smgs",
+      camos: [
+        { id: "sturmwolf_45_military", name: "Headshots", category: "military", requirement: "Get 80 headshots", order: 1 },
+        { id: "sturmwolf_45_special_1", name: "Diamondback", category: "special", requirement: "Get a kill while sliding, diving, or wall-jumping 15 times", order: 2 },
+        { id: "sturmwolf_45_special_2", name: "Raptor", category: "special", requirement: "Get 50 kills while moving", order: 3 },
+        { id: "sturmwolf_45_special_3", name: "Mainframe", category: "special", requirement: "Get 30 kills while or shortly after sprinting", order: 4 },
+        { id: "sturmwolf_45_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
+        { id: "sturmwolf_45_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "sturmwolf_45_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
+      ]
+    },
 
     // ==================== SHOTGUNS ====================
     {
@@ -419,6 +433,20 @@ const CAMO_DATA = {
         { id: "xr3_ion_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
         { id: "xr3_ion_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
         { id: "xr3_ion_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
+      ]
+    },
+    {
+      id: "hawker_hx",
+      name: "Hawker HX",
+      class: "sniper_rifles",
+      camos: [
+        { id: "hawker_hx_military", name: "One Shot Kills", category: "military", requirement: "Get 80 one shot kills", order: 1 },
+        { id: "hawker_hx_special_1", name: "Diamondback", category: "special", requirement: "Get 30 objective kills", order: 2 },
+        { id: "hawker_hx_special_2", name: "Raptor", category: "special", requirement: "Get 15 Long Shot Medals", order: 3 },
+        { id: "hawker_hx_special_3", name: "Mainframe", category: "special", requirement: "Get 50 eliminations with a suppressor equipped", order: 4 },
+        { id: "hawker_hx_mastery_1", name: "Shattered Gold", category: "mastery", requirement: "Get 3 kills without dying 10 times", order: 5 },
+        { id: "hawker_hx_mastery_2", name: "Arclight", category: "mastery", requirement: "Get 10 Double Kills or better", order: 6 },
+        { id: "hawker_hx_mastery_3", name: "Tempest", category: "mastery", requirement: "Get 5 kills without dying 3 times", order: 7 }
       ]
     },
 
