@@ -3,14 +3,14 @@
 
 const CAMO_DATA = {
   weaponClasses: [
-    { id: "assault_rifles", name: "Assault Rifles" },
-    { id: "smgs", name: "SMGs" },
-    { id: "shotguns", name: "Shotguns" },
-    { id: "lmgs", name: "LMGs" },
-    { id: "marksman_rifles", name: "Marksman Rifles" },
-    { id: "sniper_rifles", name: "Sniper Rifles" },
-    { id: "pistols", name: "Pistols" },
-    { id: "launchers", name: "Launchers" },
+    { id: "assault_rifles", name: "Assault Rifle" },
+    { id: "smgs", name: "SMG" },
+    { id: "shotguns", name: "Shotgun" },
+    { id: "lmgs", name: "LMG" },
+    { id: "marksman_rifles", name: "Marksman Rifle" },
+    { id: "sniper_rifles", name: "Sniper Rifle" },
+    { id: "pistols", name: "Pistol" },
+    { id: "launchers", name: "Launcher" },
     { id: "melee", name: "Melee" }
   ],
 

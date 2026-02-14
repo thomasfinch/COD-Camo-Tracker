@@ -175,6 +175,7 @@ function createWeaponCard(weapon) {
     <span class="weapon-expand">&#9654;</span>
     <div class="weapon-info">
       <div class="weapon-name">${weapon.name}</div>
+      <div class="weapon-class">${CAMO_DATA.weaponClasses.find(c => c.id === weapon.class)?.name || ""}</div>
     </div>
     <div class="weapon-progress">
       <span class="weapon-progress-text">${done}/${total}</span>

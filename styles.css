@@ -192,7 +192,12 @@ h1 {
 .weapon-name {
   font-weight: 600;
   font-size: 0.95rem;
-  margin-bottom: 0.15rem;
+}
+
+.weapon-class {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
 }
 
 .weapon-progress {
