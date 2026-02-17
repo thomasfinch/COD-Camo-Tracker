@@ -18,6 +18,8 @@
   --mastery: #d69e2e;
   --complete: #22c55e;
   --progress-bg: #2a2a2a;
+  --arclight: #6366f1;
+  --shattered-gold: #d69e2e;
 }
 
 body {
@@ -42,7 +44,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.75rem;
 }
 
 h1 {
@@ -331,42 +332,85 @@ h1 {
 .camo-badge.special { background: var(--special); color: #fff; }
 .camo-badge.mastery { background: var(--mastery); color: #000; }
 
-/* Singularity banner */
-.singularity-banner {
+/* Mastery progress section */
+.mastery-progress {
+  padding: 0.75rem 1.25rem;
+}
+
+.mastery-progress .progress-summary {
+  margin-bottom: 0.75rem;
+}
+
+.mastery-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.mastery-progress-grid .camo-tracker-banner:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* Camo tracker banners */
+.camo-tracker-banner {
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  border: 2px solid var(--mastery);
+  border: 2px solid var(--border);
   border-radius: 8px;
-  padding: 1.25rem;
+  padding: 1rem;
   text-align: center;
 }
 
-.singularity-banner h2 {
-  color: var(--mastery);
-  font-size: 1.1rem;
-  margin-bottom: 0.35rem;
+.camo-tracker-banner h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
 }
 
-.singularity-banner p {
+.camo-tracker-banner p {
   color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-.singularity-banner .progress-bar-track {
-  margin-top: 0.75rem;
-}
-
-.singularity-banner .singularity-stats {
-  margin-top: 0.5rem;
   font-size: 0.8rem;
+}
+
+.camo-tracker-banner .progress-bar-track {
+  margin-top: 0.5rem;
+}
+
+.camo-tracker-banner .banner-stats {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
-.singularity-banner.unlocked {
+.camo-tracker-banner.unlocked {
   border-color: var(--complete);
 }
 
-.singularity-banner.unlocked h2 {
+.camo-tracker-banner.unlocked h2 {
   color: var(--complete);
+}
+
+/* Banner color variants */
+.camo-tracker-banner.shattered-gold {
+  border-color: var(--shattered-gold);
+}
+
+.camo-tracker-banner.shattered-gold h2 {
+  color: var(--shattered-gold);
+}
+
+.camo-tracker-banner.arclight {
+  border-color: var(--arclight);
+}
+
+.camo-tracker-banner.arclight h2 {
+  color: var(--arclight);
+}
+
+.camo-tracker-banner.singularity {
+  border-color: var(--mastery);
+}
+
+.camo-tracker-banner.singularity h2 {
+  color: var(--mastery);
 }
 
 /* Scrollbar */
@@ -385,6 +429,12 @@ h1 {
 }
 
 /* Responsive */
+@media (max-width: 639px) {
+  .mastery-progress-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 640px) {
   header {
     padding: 1.25rem 2rem;
@@ -393,6 +443,10 @@ h1 {
   .class-filter {
     padding: 0.75rem 2rem;
     flex-wrap: wrap;
+  }
+
+  .mastery-progress {
+    padding: 0.75rem 2rem;
   }
 
   .weapon-list {
@@ -411,6 +465,12 @@ h1 {
 
   .class-filter {
     padding: 0.75rem 4rem;
+  }
+
+  .mastery-progress {
+    padding: 0.75rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .weapon-list {

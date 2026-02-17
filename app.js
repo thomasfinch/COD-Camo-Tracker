@@ -53,7 +53,7 @@ function importProgress(file) {
         completedCamos = new Set(data.completedCamos);
         saveProgress();
         renderWeapons();
-        updateOverallProgress();
+        updateMasteryProgress();
       }
     } catch {
       alert("Invalid progress file.");
@@ -85,24 +85,71 @@ function getWeaponProgress(weapon) {
   return { done, total: weapon.camos.length };
 }
 
-function getWeaponsWithTempest() {
+function getWeaponsWithCamo(camoName) {
   let count = 0;
   for (const w of CAMO_DATA.weapons) {
-    const tempest = w.camos.find((c) => c.name === "Tempest");
-    if (tempest && completedCamos.has(tempest.id)) count++;
+    const camo = w.camos.find((c) => c.name === camoName);
+    if (camo && completedCamos.has(camo.id)) count++;
   }
   return count;
 }
 
 // --- Rendering ---
-function updateOverallProgress() {
+function renderMasteryProgress() {
+  const section = document.getElementById("mastery-progress");
   const total = getTotalCamos();
   const done = getCompletedTotal();
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-  document.getElementById("overall-stats").textContent = `${done}/${total} (${pct}%)`;
-  const bar = document.getElementById("overall-bar");
-  bar.style.width = `${pct}%`;
-  bar.classList.toggle("complete", pct === 100);
+  const totalWeapons = CAMO_DATA.weapons.length;
+
+  const sgCount = getWeaponsWithCamo("Shattered Gold");
+  const alCount = getWeaponsWithCamo("Arclight");
+  const tpCount = getWeaponsWithCamo("Tempest");
+
+  const sgUnlocked = sgCount === totalWeapons;
+  const alUnlocked = alCount === totalWeapons;
+  const singularityReq = 30;
+  const tpUnlocked = tpCount >= singularityReq;
+
+  section.innerHTML = `
+    <div class="progress-summary">
+      <div class="progress-text">
+        <span>Overall Progress:</span>
+        <span id="overall-stats">${done}/${total} (${pct}%)</span>
+      </div>
+      <div class="progress-bar-track">
+        <div id="overall-bar" class="progress-bar-fill${pct === 100 ? " complete" : ""}" style="width:${pct}%"></div>
+      </div>
+    </div>
+    <div class="mastery-progress-grid">
+      <div class="camo-tracker-banner shattered-gold${sgUnlocked ? " unlocked" : ""}">
+        <h2>${sgUnlocked ? "Shattered Gold Complete!" : "Shattered Gold"}</h2>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill${sgUnlocked ? " complete" : ""}" style="width:${Math.round((sgCount / totalWeapons) * 100)}%"></div>
+        </div>
+        <div class="banner-stats">${sgCount}/${totalWeapons} weapons</div>
+      </div>
+      <div class="camo-tracker-banner arclight${alUnlocked ? " unlocked" : ""}">
+        <h2>${alUnlocked ? "Arclight Complete!" : "Arclight"}</h2>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill${alUnlocked ? " complete" : ""}" style="width:${Math.round((alCount / totalWeapons) * 100)}%"></div>
+        </div>
+        <div class="banner-stats">${alCount}/${totalWeapons} weapons</div>
+      </div>
+      <div class="camo-tracker-banner singularity${tpUnlocked ? " unlocked" : ""}">
+        <h2>${tpUnlocked ? "Singularity Unlocked!" : "Singularity"}</h2>
+        <p>${CAMO_DATA.globalMasteryCamo.requirement}</p>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill${tpUnlocked ? " complete" : ""}" style="width:${Math.min(Math.round((tpCount / singularityReq) * 100), 100)}%"></div>
+        </div>
+        <div class="banner-stats">${tpCount}/${singularityReq} weapons with Tempest</div>
+      </div>
+    </div>
+  `;
+}
+
+function updateMasteryProgress() {
+  renderMasteryProgress();
 }
 
 function renderClassFilter() {
@@ -134,22 +181,6 @@ function setFilter(classId) {
 function renderWeapons() {
   const container = document.getElementById("weapon-list");
   container.innerHTML = "";
-
-  // Singularity banner
-  const tempestCount = getWeaponsWithTempest();
-  const totalWeapons = 30;
-  const singBanner = document.createElement("div");
-  const singUnlocked = tempestCount === totalWeapons;
-  singBanner.className = `singularity-banner${singUnlocked ? " unlocked" : ""}`;
-  singBanner.innerHTML = `
-    <h2>${singUnlocked ? "Singularity Unlocked!" : "Singularity"}</h2>
-    <p>${CAMO_DATA.globalMasteryCamo.requirement}</p>
-    <div class="progress-bar-track">
-      <div class="progress-bar-fill${singUnlocked ? " complete" : ""}" style="width:${Math.round((tempestCount / totalWeapons) * 100)}%"></div>
-    </div>
-    <div class="singularity-stats">${tempestCount}/${totalWeapons} weapons with Tempest</div>
-  `;
-  container.appendChild(singBanner);
 
   const weapons =
     activeFilter === "all"
@@ -233,9 +264,7 @@ function createWeaponCard(weapon) {
       item.classList.toggle("completed", checkbox.checked);
       saveProgress();
       updateWeaponCardProgress(card, weapon);
-      updateOverallProgress();
-      // Update singularity banner
-      updateSingularityBanner();
+      updateMasteryProgress();
     });
 
     camoList.appendChild(item);
@@ -255,25 +284,12 @@ function updateWeaponCardProgress(card, weapon) {
   bar.classList.toggle("complete", pct === 100);
 }
 
-function updateSingularityBanner() {
-  const banner = document.querySelector(".singularity-banner");
-  if (!banner) return;
-  const tempestCount = getWeaponsWithTempest();
-  const totalWeapons = 30;
-  const unlocked = tempestCount === totalWeapons;
-  banner.classList.toggle("unlocked", unlocked);
-  banner.querySelector("h2").textContent = unlocked ? "Singularity Unlocked!" : "Singularity";
-  banner.querySelector(".progress-bar-fill").style.width = `${Math.round((tempestCount / totalWeapons) * 100)}%`;
-  banner.querySelector(".progress-bar-fill").classList.toggle("complete", unlocked);
-  banner.querySelector(".singularity-stats").textContent = `${tempestCount}/${totalWeapons} weapons with Tempest`;
-}
-
 // --- Init ---
 function init() {
   loadProgress();
   renderClassFilter();
+  renderMasteryProgress();
   renderWeapons();
-  updateOverallProgress();
 
   document.getElementById("export-btn").addEventListener("click", exportProgress);
   document.getElementById("import-file").addEventListener("change", (e) => {
